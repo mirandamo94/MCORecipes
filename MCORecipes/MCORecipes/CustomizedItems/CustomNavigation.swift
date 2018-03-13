@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CustomNavigation.swift
 //  MCORecipes
 //
 //  Created by Miranda Mo on 3/12/18.
@@ -8,18 +8,22 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CustomNavigation: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        defaultSettings()
+        navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationBar.shadowImage = UIImage()
+        navigationBar.isTranslucent = true
     }
-
+    func defaultSettings(){
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
 
 }
-
