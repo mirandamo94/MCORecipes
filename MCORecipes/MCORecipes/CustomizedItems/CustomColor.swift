@@ -17,8 +17,7 @@ struct CustomColor {
     init(withFrame: CGRect){
     let fcolor = UIColor(hexString: "ebc5cf", withAlpha: 1)
     let scolor = UIColor(hexString: "cc7293", withAlpha: 1)
-    
-    mcopink = GradientColor(.leftToRight, frame: withFrame, colors: [fcolor!,scolor!])
+        mcopink = GradientColor(.leftToRight, frame: withFrame, colors: [fcolor!,scolor!])
     }
     
     //Gets the classic MCO logo's gradient pink

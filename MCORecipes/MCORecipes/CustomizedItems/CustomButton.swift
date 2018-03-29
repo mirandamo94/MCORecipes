@@ -15,7 +15,13 @@ class CustomButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         defaultButton()
-        makeDefaultBorderButton()
+        
+    }
+    //First required loading function
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        defaultButton()
+        
     }
     
     //changes button to MCOPink
@@ -27,10 +33,11 @@ class CustomButton: UIButton {
         layer.cornerRadius = layer.frame.height/2
         layer.masksToBounds = true
         //set space for log in button
-        let space = 1.5
-        let attributeString = NSMutableAttributedString(string: (titleLabel?.text)!)
-        attributeString.addAttribute(NSAttributedStringKey.kern, value: space, range: NSMakeRange(0, attributeString.length) )
-        self.setAttributedTitle(attributeString, for: .normal)
+        //spacing
+        let spacing = 1.5
+        let buttonAttributedString = NSMutableAttributedString(string: (titleLabel?.text)!)
+        buttonAttributedString.addAttribute(NSAttributedStringKey.kern, value: spacing, range: NSMakeRange(0, buttonAttributedString.length))
+        self.setAttributedTitle(buttonAttributedString, for: .normal)
     }
     //gets the button template from the sign up button in our LogInViewController
     func makeDefaultBorderButton(){
@@ -42,16 +49,12 @@ class CustomButton: UIButton {
         layer.cornerRadius = layer.frame.height/2
         layer.masksToBounds = true
         //set space for sign up button
-        let sspace = 1.5
-        let sattributeString = NSMutableAttributedString(string: (titleLabel?.text)!)
-        sattributeString.addAttribute(NSAttributedStringKey.kern, value: sspace, range: NSMakeRange(0, sattributeString.length) )
-        self.setAttributedTitle(sattributeString, for: .normal)
+        //spacing
+        let spacing = 1.5
+        let buttonAttributedString = NSMutableAttributedString(string: (titleLabel?.text)!)
+        buttonAttributedString.addAttribute(NSAttributedStringKey.kern, value: spacing, range: NSMakeRange(0, buttonAttributedString.length))
+        self.setAttributedTitle(buttonAttributedString, for: .normal)
     }
     
-    //First required loading function
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        defaultButton()
-        makeDefaultBorderButton()
-    }
+    
 }

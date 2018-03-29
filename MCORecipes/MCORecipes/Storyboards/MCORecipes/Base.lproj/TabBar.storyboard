@@ -17,6 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
+                                <color key="value" red="0.92156862745098034" green="0.77254901960784317" blue="0.81176470588235294" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselected">
+                                <color key="value" white="0.25" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </tabBar>
                     <connections>
                         <segue destination="Hg0-6B-GlT" kind="relationship" relationship="viewControllers" id="89t-x3-mLk"/>
@@ -33,7 +41,7 @@
         <!--MyAccount-->
         <scene sceneID="SLo-AS-wdO">
             <objects>
-                <viewControllerPlaceholder storyboardName="MyProfile" referencedIdentifier="MyAccount" id="U5F-pb-G7w" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="MyAccount" referencedIdentifier="MyAccount" id="U5F-pb-G7w" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="sPa-dj-5aI"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ifg-C8-ogp" userLabel="First Responder" sceneMemberID="firstResponder"/>
